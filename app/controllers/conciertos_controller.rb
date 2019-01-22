@@ -1,7 +1,7 @@
 class ConciertosController < ApplicationController
 
     def index
-        @conciertos = Encuentro.last.conciertos
+        @conciertos = Encuentro.last.conciertos.ordenados
     end
 
     def show

@@ -12,7 +12,7 @@
                 </p>
               </header>
               <div class="card-content">
-                <% @encuentro.conciertos.where(fecha: d.fecha).each do |c| %>
+                <% @encuentro.conciertos_ordenados.where(fecha: d.fecha).each do |c| %>
                   <p class="has-text-left has-text-weight-bold"><%= c.compositor %></p>
                   <p class="has-text-left is-marginless"><em><%= c.titulo %></em></p>
                   <%= simple_format(c.interpretes, class: 'has-text-left') %>
