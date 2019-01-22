@@ -17,7 +17,7 @@ class Encuentro < ApplicationRecord
   end
 
   def conciertos_por_dia
-    conciertos.group(:fecha).select(:fecha)
+    conciertos.order(:fecha).group(:fecha).select(:fecha)
   end
 
   def conciertos_ordenados
